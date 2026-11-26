@@ -1371,12 +1371,33 @@ a:hover { color: #fff; }
   gap: 12px;
 }
 
+.footer-bottom-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .footer-bottom p {
   font-size: 0.82rem;
   color: var(--text-muted);
 }
 
 .footer-bottom span {
+  color: var(--green-light);
+}
+
+.footer-legal {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.footer-legal a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-legal a:hover {
   color: var(--green-light);
 }
 
@@ -1491,7 +1512,289 @@ a:hover { color: #fff; }
 .delay-4 { transition-delay: 0.4s; }
 .delay-5 { transition-delay: 0.5s; }
 
-/* ---- RESPONSIVO ---- */
+/* ======================================================
+   SEÇÃO HARDWARE CORPORATIVO
+   ====================================================== */
+
+.hw-section {
+  padding: 120px 0;
+  background: var(--navy-deep);
+  position: relative;
+  overflow: hidden;
+}
+
+.hw-section::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 100, 200, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* -- Banner -- */
+.hw-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  background: linear-gradient(135deg, #0a1830 0%, #0d2040 50%, #091525 100%);
+  border: 1px solid rgba(0, 120, 212, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  margin-bottom: 64px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hw-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #0078D4, #00E5B0, transparent);
+}
+
+.hw-banner-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.hw-brands {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.hw-brand-pill {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(0, 120, 212, 0.12);
+  border: 1px solid rgba(0, 120, 212, 0.35);
+  color: #5BB8FF;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 6px 16px;
+  border-radius: 100px;
+}
+
+.hw-banner-text h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.hw-banner-text p {
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin-bottom: 28px;
+}
+
+.hw-banner-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 220px;
+}
+
+.hw-stat {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 120, 212, 0.08);
+  border: 1px solid rgba(0, 120, 212, 0.2);
+  border-radius: var(--radius-md);
+}
+
+.hw-stat-num {
+  font-size: 1.9rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #0078D4, #00E5B0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.hw-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* -- Grid de produtos -- */
+.hw-products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.hw-product-card {
+  background: var(--grad-card);
+  border: 1px solid var(--navy-border);
+  border-radius: var(--radius-md);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.hw-product-card:hover {
+  border-color: rgba(0, 120, 212, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 120, 212, 0.1);
+}
+
+.hw-product-icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.hw-product-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 229, 176, 0.12);
+  border: 1px solid rgba(0, 229, 176, 0.3);
+  color: var(--green-light);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.hw-product-card h3 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-top: 4px;
+}
+
+.hw-product-card p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.hw-product-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.hw-product-list li {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  padding-left: 16px;
+  position: relative;
+}
+
+.hw-product-list li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: #0078D4;
+  font-weight: 700;
+}
+
+.hw-product-cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0078D4;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.hw-product-cta:hover {
+  color: var(--green-light);
+}
+
+/* -- Processo -- */
+.hw-process {
+  background: var(--grad-card);
+  border: 1px solid var(--navy-border);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+}
+
+.hw-process-title {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.hw-process-steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.hw-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.hw-step-num {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #0078D4;
+  opacity: 0.7;
+}
+
+.hw-step-icon {
+  font-size: 2rem;
+  line-height: 1;
+  background: rgba(0, 120, 212, 0.08);
+  border: 1px solid rgba(0, 120, 212, 0.2);
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hw-step-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.hw-step p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.hw-step-arrow {
+  color: rgba(0, 120, 212, 0.4);
+  font-size: 1.5rem;
+  margin-top: 32px;
+  flex-shrink: 0;
+}
+
+/* ---- RESPONSIVO HARDWARE ---- */
 @media (max-width: 1024px) {
   .hero-content {
     grid-template-columns: 1fr;
@@ -1527,6 +1830,27 @@ a:hover { color: #fff; }
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
+
+  .hw-banner {
+    flex-direction: column;
+  }
+
+  .hw-banner-stats {
+    flex-direction: row;
+    min-width: unset;
+    width: 100%;
+  }
+
+  .hw-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hw-process-steps {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hw-step-arrow { display: none; }
 }
 
 @media (max-width: 768px) {
@@ -1576,6 +1900,18 @@ a:hover { color: #fff; }
   .hero-card-stack {
     width: 320px;
     height: 360px;
+  }
+
+  .hw-products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hw-banner-stats {
+    flex-direction: column;
+  }
+
+  .hw-process {
+    padding: 28px 20px;
   }
 }
 
