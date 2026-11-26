@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instalação</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Fundo animado -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">⚙️</span>
+        <div class="logo-pulse"></div>
+      </div>
+      <div class="header-text">
+        <h1>Green Serverless Instalações</h1>
+        <p>Downloads e recursos para configuração de equipamentos</p>
+      </div>
+      <div class="header-status">
+        <span class="status-dot"></span>
+        <span>Sistema Online</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Barra de busca -->
+  <div class="search-bar-wrapper">
+    <div class="search-bar">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" placeholder="Buscar programa ou driver..." />
+      <span class="search-clear" id="search-clear">✕</span>
+    </div>
+  </div>
+
+  <!-- Grid de cards -->
+  <main id="cards-grid">
+
+    <!-- 1. Navegadores -->
+    <div class="card" data-category="navegador browser chrome firefox internet">
+      <div class="card-glow"></div>
+      <div class="card-header">
+        <div class="card-icon" style="--icon-color: #0ea5e9;">🌐</div>
+        <div>
+          <div class="card-title">Navegadores</div>
+          <div class="card-subtitle">Instaladores oficiais dos principais browsers</div>
+        </div>
+        <div class="card-badge badge-blue">BROWSER</div>
+      </div>
+      <div class="btn-list">
+        <a href="https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B147E1308-14F4-BFC5-176F-A293DC502D0B%7D%26lang%3Dpt-BR%26browser%3D4%26usagestats%3D1%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3D-arch_x64-statsdef_1%26installdataindex%3Dempty/update2/installers/ChromeSetup.exe" target="_blank" class="btn btn-blue">
+          <div class="btn-content">
+            <span class="btn-icon">🟡</span>
+            <div>
+              <div class="btn-name">Google Chrome</div>
+              <div class="btn-desc">Instalador Windows x64 (pt-BR)</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <a href="https://cdn.stubdownloader.services.mozilla.com/builds/firefox-stub/pt-BR/win/5e508b53a7d8e586b95e771aee1369e92e87f82ebdffc8d9c3790b33aed2ad03/Firefox%20Installer.exe" target="_blank" class="btn btn-blue">
+          <div class="btn-content">
+            <span class="btn-icon">🦊</span>
+            <div>
+              <div class="btn-name">Mozilla Firefox</div>
+              <div class="btn-desc">Instalador Windows (pt-BR)</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 2. Acesso Remoto -->
+    <div class="card" data-category="acesso remoto anydesk rustdesk teamviewer khelpdesk megadesk">
+      <div class="card-glow"></div>
+      <div class="card-header">
+        <div class="card-icon" style="--icon-color: #8b5cf6;">🔌</div>
+        <div>
+          <div class="card-title">Acesso Remoto</div>
+          <div class="card-subtitle">Suporte e controle a distância</div>
+        </div>
+        <div class="card-badge badge-purple">REMOTE</div>
+      </div>
+      <div class="btn-list">
+        <a href="https://os.megaboot.eng.br/tools/megadesk.msi" target="_blank" class="btn btn-purple">
+          <div class="btn-content">
+            <span class="btn-icon">🖥️</span>
+            <div>
+              <div class="btn-name">Megadesk</div>
+              <div class="btn-desc">Acesso remoto · Instalador .msi</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <a href="https://download.anydesk.com/AnyDesk.exe" target="_blank" class="btn btn-purple">
+          <div class="btn-content">
+            <span class="btn-icon">🖥️</span>
+            <div>
+              <div class="btn-name">AnyDesk</div>
+              <div class="btn-desc">Instalador Windows (.exe)</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <a href="https://github.com/rustdesk/rustdesk/releases/download/1.5.0/rustdesk-1.5.0-x86_64.exe" target="_blank" class="btn btn-purple">
+          <div class="btn-content">
+            <span class="btn-icon">🖥️</span>
+            <div>
+              <div class="btn-name">RustDesk</div>
+              <div class="btn-desc">Open source · v1.5.0 x86_64</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <a href="https://download.teamviewer.com/download/TeamViewer_Setup_x64.exe" target="_blank" class="btn btn-purple">
+          <div class="btn-content">
+            <span class="btn-icon">🖥️</span>
+            <div>
+              <div class="btn-name">TeamViewer</div>
+              <div class="btn-desc">Instalador Windows x64</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <a href="https://khelpdesk.com/downloads/novo/KHelpDesk.exe?v=50.34" target="_blank" class="btn btn-purple">
+          <div class="btn-content">
+            <span class="btn-icon">🖥️</span>
+            <div>
+              <div class="btn-name">KHelpDesk</div>
+              <div class="btn-desc">Acesso remoto · v50.34</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 3. Pacote Office -->
+    <div class="card" data-category="office microsoft word excel powershell ativação">
+      <div class="card-glow"></div>
+      <div class="card-header">
+        <div class="card-icon" style="--icon-color: #10b981;">📄</div>
+        <div>
+          <div class="card-title">Pacote Office</div>
+          <div class="card-subtitle">Imagem original de instalação</div>
+        </div>
+        <div class="card-badge badge-green">OFFICE</div>
+      </div>
+      <div class="btn-list">
+        <a href="https://c2rsetup.officeapps.live.com/c2r/download.aspx?ProductreleaseID=O365ProPlusRetail&platform=x64&language=pt-br&version=O16GA" target="_blank" class="btn btn-green">
+          <div class="btn-content">
+            <span class="btn-icon">📦</span>
+            <div>
+              <div class="btn-name">Genuine Installation Media</div>
+              <div class="btn-desc">Download via massgrave.dev</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+      </div>
+
+      <!-- Bloco PowerShell -->
+      <div class="ps-block">
+        <div class="ps-label">
+          <span class="ps-label-icon">🔷</span>
+          <span>PowerShell</span>
+          <span class="ps-hint">Execute como Administrador</span>
+        </div>
+        <div class="ps-box">
+          <code class="ps-code" id="ps-cmd">irm https://get.activated.win | iex</code>
+          <button class="ps-copy-btn" id="ps-copy-btn" title="Copiar comando" onclick="copyPsCmd()">
+            <span class="ps-copy-icon" id="ps-copy-icon">📋</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Impressoras -->
+    <div class="card" data-category="impressora brother hp epson bematech bztech zebra driver print">
+      <div class="card-glow"></div>
+      <div class="card-header">
+        <div class="card-icon" style="--icon-color: #ef4444;">🖨️</div>
+        <div>
+          <div class="card-title">Impressoras</div>
+          <div class="card-subtitle">Drivers e suporte oficial por fabricante</div>
+        </div>
+        <div class="card-badge badge-red">PRINT</div>
+      </div>
+      <div class="btn-list">
+        <a href="https://support.brother.com/g/b/productsearch.aspx?c=br&lang=pt&content=dl" target="_blank" class="btn btn-red">
+          <div class="btn-content">
+            <span class="btn-icon">🔎</span>
+            <div>
+              <div class="btn-name">Brother</div>
+              <div class="btn-desc">Busca por modelo de impressora</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <a href="https://support.hp.com/br-pt/drivers/printers" target="_blank" class="btn btn-red">
+          <div class="btn-content">
+            <span class="btn-icon">🔎</span>
+            <div>
+              <div class="btn-name">HP</div>
+              <div class="btn-desc">Busca por modelo de impressora</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <a href="https://www.bztech.com.br/downloads" target="_blank" class="btn btn-red">
+          <div class="btn-content">
+            <span class="btn-icon">🔎</span>
+            <div>
+              <div class="btn-name">Elgin Bematech BZTech</div>
+              <div class="btn-desc">Downloads de drivers e utilitários</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <a href="https://epson.com.br/Suporte/Impressoras/sh/s1" target="_blank" class="btn btn-red">
+          <div class="btn-content">
+            <span class="btn-icon">🔎</span>
+            <div>
+              <div class="btn-name">Epson</div>
+              <div class="btn-desc">Suporte e drivers Epson Brasil</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <a href="https://www.zebra.com/br/pt/support-downloads/printers.html" target="_blank" class="btn btn-red">
+          <div class="btn-content">
+            <span class="btn-icon">🔎</span>
+            <div>
+              <div class="btn-name">Zebra</div>
+              <div class="btn-desc">Suporte e drivers Zebra Brasil</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 5. Sistema Balança -->
+    <div class="card" data-category="balanca sistema">
+      <div class="card-glow"></div>
+      <div class="card-header">
+        <div class="card-icon" style="--icon-color: #3b82f6;">⚖️</div>
+        <div>
+          <div class="card-title">Sistema Balança</div>
+          <div class="card-subtitle">Utilitários de comunicação serial</div>
+        </div>
+        <div class="card-badge badge-blue">SISTEMA</div>
+      </div>
+      <div class="btn-list">
+        <a href="https://www.hw-group.com/files/download/sw/version/hercules_3-2-8.exe" target="_blank" class="btn btn-blue">
+          <div class="btn-content">
+            <span class="btn-icon">⚡</span>
+            <div>
+              <div class="btn-name">Hercules Setup Utility</div>
+              <div class="btn-desc">Terminal serial / TCP / UDP</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <a href="#" class="btn btn-gray" onclick="return false;" title="Link em breve">
+          <div class="btn-content">
+            <span class="btn-icon">�</span>
+            <div>
+              <div class="btn-name">Drives Balança</div>
+              <div class="btn-desc">Link em breve</div>
+            </div>
+          </div>
+          <span class="btn-arrow coming-soon">…</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 6. Drivers Windows -->
+    <div class="card" data-category="drivers windows hardware">
+      <div class="card-glow"></div>
+      <div class="card-header">
+        <div class="card-icon" style="--icon-color: #f59e0b;">🔧</div>
+        <div>
+          <div class="card-title">Drivers Windows</div>
+          <div class="card-subtitle">Identificação automática de hardware</div>
+        </div>
+        <div class="card-badge badge-orange">DRIVER</div>
+      </div>
+      <div class="btn-list">
+        <a href="https://www.driveridentifier.com/files/driveridentifier_setup.exe" target="_blank" class="btn btn-orange">
+          <div class="btn-content">
+            <span class="btn-icon">🔍</span>
+            <div>
+              <div class="btn-name">Driver Identifier</div>
+              <div class="btn-desc">Detecta e instala drivers ausentes</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 7. Utilitários do Sistema -->
+    <div class="card" data-category="utilitario compactador desinstalador winrar geek uninstaller zip rar sistema">
+      <div class="card-glow"></div>
+      <div class="card-header">
+        <div class="card-icon" style="--icon-color: #14b8a6;">🧰</div>
+        <div>
+          <div class="card-title">Utilitários do Sistema</div>
+          <div class="card-subtitle">Compactação e desinstalação de programas</div>
+        </div>
+        <div class="card-badge badge-teal">UTIL</div>
+      </div>
+      <div class="btn-list">
+        <a href="https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-723br.exe" target="_blank" class="btn btn-teal">
+          <div class="btn-content">
+            <span class="btn-icon">📦</span>
+            <div>
+              <div class="btn-name">WinRAR</div>
+              <div class="btn-desc">Compactador · x64 · v7.23 (pt-BR)</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <a href="https://geekuninstaller.com/geek.zip" target="_blank" class="btn btn-teal">
+          <div class="btn-content">
+            <span class="btn-icon">🗑️</span>
+            <div>
+              <div class="btn-name">Geek Uninstaller</div>
+              <div class="btn-desc">Desinstalador de programas · .zip</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 8. Drive S3 Windows -->
+    <div class="card" data-category="drive s3 cloud rclone winfsp nuvem armazenamento montagem bucket aws google amazon">
+      <div class="card-glow"></div>
+      <div class="card-header">
+        <div class="card-icon" style="--icon-color: #6366f1;">☁️</div>
+        <div>
+          <div class="card-title">Drive S3 Windows</div>
+          <div class="card-subtitle">Montagem de armazenamento na nuvem</div>
+        </div>
+        <div class="card-badge badge-indigo">S3</div>
+      </div>
+      <div class="btn-list">
+        <a href="https://downloads.rclone.org/v1.76.0/rclone-v1.76.0-windows-amd64.zip" target="_blank" class="btn btn-indigo">
+          <div class="btn-content">
+            <span class="btn-icon">🔄</span>
+            <div>
+              <div class="btn-name">Rclone</div>
+              <div class="btn-desc">Sincronização cloud · v1.76.0 x64 (.zip)</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <a href="https://github.com/winfsp/winfsp/releases/download/v2.1/winfsp-2.1.25156.msi" target="_blank" class="btn btn-indigo">
+          <div class="btn-content">
+            <span class="btn-icon">🔗</span>
+            <div>
+              <div class="btn-name">WinFsp</div>
+              <div class="btn-desc">Montagem de drives virtuais · v2.1 (.msi)</div>
+            </div>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+      </div>
+
+      <!-- Bloco arquivo.vbs -->
+      <div class="ps-block">
+        <div class="ps-label">
+          <span class="ps-label-icon">📄</span>
+          <span>arquivo.vbs</span>
+          <span class="ps-hint">Salve como .vbs e execute</span>
+        </div>
+        <div class="ps-box">
+          <code class="ps-code vbs-code" id="vbs-cmd">Set objShell = CreateObject("WScript.Shell")
+
+objShell.Run "rclone mount (Nome do Rclone):(Nome do bucket) (Letra): --vfs-cache-mode full", 0, False</code>
+          <button class="ps-copy-btn" id="vbs-copy-btn" title="Copiar comando" onclick="copyVbsCmd()">
+            <span class="ps-copy-icon" id="vbs-copy-icon">📋</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Bloco shell:startup -->
+      <div class="ps-block">
+        <div class="ps-label">
+          <span class="ps-label-icon">📂</span>
+          <span>shell:startup</span>
+          <span class="ps-hint">Cole no Executar (Win + R)</span>
+        </div>
+        <div class="ps-box">
+          <code class="ps-code" id="startup-cmd">shell:startup</code>
+          <button class="ps-copy-btn" id="startup-copy-btn" title="Copiar comando" onclick="copyStartupCmd()">
+            <span class="ps-copy-icon" id="startup-copy-icon">📋</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Mensagem nenhum resultado -->
+  <div class="no-results" id="no-results">
+    <span>🔭</span>
+    <p>Nenhum resultado encontrado para "<span id="no-results-term"></span>"</p>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span>Raul Wagner</span>
+      <span class="footer-sep">·</span>
+      <span>Uso interno</span>
+      <span class="footer-sep">·</span>
+      <span id="footer-clock"></span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Green Serverless — Criamos sites e sistemas modernos na nuvem AWS. Landing pages, e-commerce, APIs serverless com S3, Lambda, DynamoDB, CloudFront e mais." />
+  <meta name="keywords" content="criação de sites, desenvolvimento web, AWS, serverless, lambda, s3, dynamodb, cloudfront, goiânia" />
+  <meta name="author" content="Green Serverless" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Green Serverless — Sites e Sistemas na Nuvem AWS" />
+  <meta property="og:description" content="Desenvolvemos sites e sistemas modernos, rápidos e escaláveis usando a infraestrutura AWS." />
+  <meta property="og:image" content="logo.png" />
+  <meta property="og:url" content="https://greenserverless.com" />
+  <meta property="og:type" content="website" />
+
+  <title>Green Serverless — Sites e Sistemas na Nuvem AWS</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="logo.png" />
+</head>
+<body>
+
+  <!-- ================================================
+       NAVBAR
+  ================================================ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navegação principal">
+    <div class="container">
+      <div class="nav-inner">
+
+        <a href="#inicio" class="nav-logo" aria-label="Green Serverless — Início">
+          <img src="logo.png" alt="Green Serverless Logo" />
+        </a>
+
+        <ul class="nav-links" id="nav-links" role="list">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#tecnologias">Tecnologias</a></li>
+          <li><a href="#como-funciona">Como Funciona</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="https://wa.me/5562992099914?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Green%20Serverless."
+             class="btn btn-primary"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Contato via WhatsApp">
+            <!-- WhatsApp icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Falar no WhatsApp
+          </a>
+
+          <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section class="hero" id="inicio" aria-label="Apresentação">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+    <div class="container">
+      <div class="hero-content">
+
+        <!-- Texto esquerda -->
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="hero-badge-dot" aria-hidden="true"></span>
+            Powered by AWS Cloud
+          </div>
+
+          <h1 class="hero-title">
+            Seu negócio na
+            <span class="line-2">nuvem AWS</span>
+          </h1>
+
+          <p class="hero-description">
+            Criamos sites e sistemas modernos, rápidos e escaláveis usando
+            a infraestrutura da Amazon Web Services. Do design ao deploy,
+            entregamos soluções completas para o seu negócio crescer.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contato" class="btn btn-primary">
+              <!-- Rocket icon -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+              </svg>
+              Iniciar Projeto
+            </a>
+            <a href="#portfolio" class="btn btn-outline">
+              Ver Portfólio
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-stats" role="list" aria-label="Estatísticas">
+            <div class="stat-item" role="listitem">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Serverless na AWS</div>
+            </div>
+            <div class="stat-item" role="listitem">
+              <div class="stat-number">2+</div>
+              <div class="stat-label">Projetos em produção</div>
+            </div>
+            <div class="stat-item" role="listitem">
+              <div class="stat-number">24h</div>
+              <div class="stat-label">Disponibilidade</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card visual direita -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-card-stack">
+
+            <!-- Cards atrás -->
+            <div class="hero-card hero-card-back2"></div>
+            <div class="hero-card hero-card-back1"></div>
+
+            <!-- Card principal -->
+            <div class="hero-card hero-card-main">
+              <div class="card-header-row">
+                <div class="card-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="card-status">
+                  <span class="status-dot"></span>
+                  Lambda deployed
+                </div>
+              </div>
+
+              <div class="card-code">
+                <div class="code-line">
+                  <span class="code-num">1</span>
+                  <span><span class="code-cmt">// handler.js — AWS Lambda</span></span>
+                </div>
+                <div class="code-line">
+                  <span class="code-num">2</span>
+                  <span><span class="code-kw">export const</span> <span class="code-fn">handler</span> <span class="code-sym">= async (</span><span class="code-var">event</span><span class="code-sym">) => {</span></span>
+                </div>
+                <div class="code-line">
+                  <span class="code-num">3</span>
+                  <span>&nbsp;&nbsp;<span class="code-kw">const</span> <span class="code-var">data</span> <span class="code-sym">= await</span> <span class="code-fn">db</span><span class="code-sym">.</span><span class="code-fn">query</span><span class="code-sym">(</span><span class="code-var">params</span><span class="code-sym">);</span></span>
+                </div>
+                <div class="code-line">
+                  <span class="code-num">4</span>
+                  <span>&nbsp;&nbsp;<span class="code-kw">return</span> <span class="code-sym">{</span></span>
+                </div>
+                <div class="code-line">
+                  <span class="code-num">5</span>
+                  <span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-var">statusCode</span><span class="code-sym">:</span> <span class="code-str">200</span><span class="code-sym">,</span></span>
+                </div>
+                <div class="code-line">
+                  <span class="code-num">6</span>
+                  <span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-var">body</span><span class="code-sym">:</span> <span class="code-fn">JSON</span><span class="code-sym">.</span><span class="code-fn">stringify</span><span class="code-sym">(</span><span class="code-var">data</span><span class="code-sym">)</span></span>
+                </div>
+                <div class="code-line">
+                  <span class="code-num">7</span>
+                  <span>&nbsp;&nbsp;<span class="code-sym">};</span></span>
+                </div>
+                <div class="code-line">
+                  <span class="code-num">8</span>
+                  <span><span class="code-sym">};</span></span>
+                </div>
+              </div>
+
+              <div class="card-metrics">
+                <div class="metric-box">
+                  <div class="metric-label">Latência</div>
+                  <div class="metric-val">12ms</div>
+                </div>
+                <div class="metric-box">
+                  <div class="metric-label">Uptime</div>
+                  <div class="metric-val">99.9%</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating badges -->
+            <div class="hero-float f1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Deploy concluído
+            </div>
+            <div class="hero-float f2">
+              ☁️ AWS CloudFront
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       SERVIÇOS
+  ================================================ -->
+  <section class="services" id="servicos" aria-labelledby="services-title">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-tag">O que fazemos</div>
+        <h2 id="services-title">Nossos <span>Serviços</span></h2>
+        <p>Do layout ao servidor, entregamos soluções digitais completas e escaláveis para o seu negócio.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Landing Page -->
+        <article class="service-card reveal delay-1">
+          <div class="service-icon" aria-hidden="true">🎯</div>
+          <h3>Landing Page</h3>
+          <p>Páginas de alta conversão com design moderno, carregamento ultra-rápido e hospedagem serverless na AWS.</p>
+          <div class="service-tags">
+            <span class="service-tag">HTML/CSS/JS</span>
+            <span class="service-tag">S3 + CloudFront</span>
+            <span class="service-tag">Route 53</span>
+          </div>
+        </article>
+
+        <!-- Site Institucional -->
+        <article class="service-card reveal delay-2">
+          <div class="service-icon" aria-hidden="true">🌐</div>
+          <h3>Site Institucional</h3>
+          <p>Presença digital completa para sua empresa com múltiplas páginas, blog e painel de administração.</p>
+          <div class="service-tags">
+            <span class="service-tag">Multi-página</span>
+            <span class="service-tag">CMS</span>
+            <span class="service-tag">DynamoDB</span>
+          </div>
+        </article>
+
+        <!-- E-commerce -->
+        <article class="service-card reveal delay-3">
+          <div class="service-icon" aria-hidden="true">🛒</div>
+          <h3>E-commerce</h3>
+          <p>Loja virtual completa com catálogo de produtos, carrinho, checkout e integração com gateways de pagamento.</p>
+          <div class="service-tags">
+            <span class="service-tag">Pagamentos</span>
+            <span class="service-tag">Cognito Auth</span>
+            <span class="service-tag">Lambda</span>
+          </div>
+        </article>
+
+        <!-- API Serverless -->
+        <article class="service-card reveal delay-4">
+          <div class="service-icon" aria-hidden="true">⚡</div>
+          <h3>API Serverless</h3>
+          <p>Backends escaláveis sem gerenciar servidores. Pague apenas pelo que usar, com performance de nível enterprise.</p>
+          <div class="service-tags">
+            <span class="service-tag">API Gateway</span>
+            <span class="service-tag">Lambda</span>
+            <span class="service-tag">DynamoDB</span>
+          </div>
+        </article>
+
+        <!-- Autenticação -->
+        <article class="service-card reveal delay-1">
+          <div class="service-icon" aria-hidden="true">🔐</div>
+          <h3>Autenticação & Auth</h3>
+          <p>Login seguro com AWS Cognito, suporte a redes sociais, MFA e controle de acesso por perfis de usuário.</p>
+          <div class="service-tags">
+            <span class="service-tag">Cognito</span>
+            <span class="service-tag">OAuth 2.0</span>
+            <span class="service-tag">JWT</span>
+          </div>
+        </article>
+
+        <!-- Catálogo Digital -->
+        <article class="service-card reveal delay-2">
+          <div class="service-icon" aria-hidden="true">📱</div>
+          <h3>Catálogo Digital</h3>
+          <p>Catálogos interativos de produtos ou serviços, com filtros, busca e painel de gestão integrado.</p>
+          <div class="service-tags">
+            <span class="service-tag">S3</span>
+            <span class="service-tag">DynamoDB</span>
+            <span class="service-tag">Responsivo</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       STACK AWS
+  ================================================ -->
+  <section class="aws-stack" id="tecnologias" aria-labelledby="aws-title">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-tag">Infraestrutura</div>
+        <h2 id="aws-title">Nossa <span>Stack AWS</span></h2>
+        <p>Usamos os serviços mais confiáveis da Amazon Web Services para entregar performance, segurança e escalabilidade.</p>
+      </div>
+
+      <div class="aws-grid">
+
+        <div class="aws-card reveal delay-1">
+          <div class="aws-icon aws-s3" aria-hidden="true">🗄️</div>
+          <div class="aws-info">
+            <div class="aws-service-name">Amazon S3</div>
+            <div class="aws-service-desc">Armazenamento de arquivos estáticos, imagens, vídeos e hosting de sites com 99.999999999% de durabilidade.</div>
+            <span class="aws-badge aws-s3">Storage</span>
+          </div>
+        </div>
+
+        <div class="aws-card reveal delay-2">
+          <div class="aws-icon aws-cf" aria-hidden="true">🌍</div>
+          <div class="aws-info">
+            <div class="aws-service-name">CloudFront</div>
+            <div class="aws-service-desc">CDN global com mais de 400 pontos de presença. Entrega conteúdo com latência mínima para qualquer lugar do mundo.</div>
+            <span class="aws-badge aws-cf">CDN</span>
+          </div>
+        </div>
+
+        <div class="aws-card reveal delay-3">
+          <div class="aws-icon aws-lambda" aria-hidden="true">⚡</div>
+          <div class="aws-info">
+            <div class="aws-service-name">AWS Lambda</div>
+            <div class="aws-service-desc">Funções serverless que executam código sem provisionar servidores. Escalonamento automático e cobrança por execução.</div>
+            <span class="aws-badge aws-lambda">Serverless</span>
+          </div>
+        </div>
+
+        <div class="aws-card reveal delay-1">
+          <div class="aws-icon aws-dynamo" aria-hidden="true">🗃️</div>
+          <div class="aws-info">
+            <div class="aws-service-name">DynamoDB</div>
+            <div class="aws-service-desc">Banco de dados NoSQL totalmente gerenciado com performance de milissegundos em qualquer escala.</div>
+            <span class="aws-badge aws-dynamo">Database</span>
+          </div>
+        </div>
+
+        <div class="aws-card reveal delay-2">
+          <div class="aws-icon aws-cognito" aria-hidden="true">👤</div>
+          <div class="aws-info">
+            <div class="aws-service-name">Cognito</div>
+            <div class="aws-service-desc">Autenticação e autorização de usuários com suporte a login social, MFA e gerenciamento de identidade.</div>
+            <span class="aws-badge aws-cognito">Auth</span>
+          </div>
+        </div>
+
+        <div class="aws-card reveal delay-3">
+          <div class="aws-icon aws-route53" aria-hidden="true">🔀</div>
+          <div class="aws-info">
+            <div class="aws-service-name">Route 53</div>
+            <div class="aws-service-desc">DNS gerenciado com alta disponibilidade, roteamento inteligente e integração nativa com demais serviços AWS.</div>
+            <span class="aws-badge aws-route53">DNS</span>
+          </div>
+        </div>
+
+        <div class="aws-card reveal delay-1">
+          <div class="aws-icon aws-ses" aria-hidden="true">📧</div>
+          <div class="aws-info">
+            <div class="aws-service-name">SES + SNS</div>
+            <div class="aws-service-desc">Envio de e-mails transacionais e notificações em tempo real para formulários de contato e alertas de sistema.</div>
+            <span class="aws-badge aws-ses">Messaging</span>
+          </div>
+        </div>
+
+        <div class="aws-card reveal delay-2">
+          <div class="aws-icon aws-api" aria-hidden="true">🔌</div>
+          <div class="aws-info">
+            <div class="aws-service-name">API Gateway</div>
+            <div class="aws-service-desc">Criação e gerenciamento de APIs REST e WebSocket com throttling, autenticação e monitoramento integrados.</div>
+            <span class="aws-badge aws-api">API</span>
+          </div>
+        </div>
+
+        <div class="aws-card reveal delay-3">
+          <div class="aws-icon aws-iam" aria-hidden="true">🔒</div>
+          <div class="aws-info">
+            <div class="aws-service-name">IAM</div>
+            <div class="aws-service-desc">Controle de acesso granular a todos os recursos AWS com políticas, roles e permissões de segurança.</div>
+            <span class="aws-badge aws-iam">Security</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       COMO FUNCIONA
+  ================================================ -->
+  <section class="how-it-works" id="como-funciona" aria-labelledby="how-title">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-tag">Processo</div>
+        <h2 id="how-title">Como <span>Funciona</span></h2>
+        <p>Do primeiro contato à entrega final, nosso processo é simples, transparente e focado no seu resultado.</p>
+      </div>
+
+      <div class="steps-grid" role="list" aria-label="Etapas do processo">
+
+        <div class="step-item reveal delay-1" role="listitem">
+          <div class="step-number" aria-hidden="true">01</div>
+          <div class="step-icon" aria-hidden="true">💬</div>
+          <div class="step-title">Conversa Inicial</div>
+          <p class="step-desc">Você nos conta sobre o projeto via WhatsApp ou formulário. Entendemos suas necessidades, público e objetivos.</p>
+        </div>
+
+        <div class="step-item reveal delay-2" role="listitem">
+          <div class="step-number" aria-hidden="true">02</div>
+          <div class="step-icon" aria-hidden="true">🎨</div>
+          <div class="step-title">Design & Proposta</div>
+          <p class="step-desc">Criamos o layout, definimos a arquitetura AWS e enviamos uma proposta detalhada com prazos e valores.</p>
+        </div>
+
+        <div class="step-item reveal delay-3" role="listitem">
+          <div class="step-number" aria-hidden="true">03</div>
+          <div class="step-icon" aria-hidden="true">⚙️</div>
+          <div class="step-title">Desenvolvimento</div>
+          <p class="step-desc">Desenvolvemos o projeto com atualizações constantes. Você acompanha o progresso em tempo real.</p>
+        </div>
+
+        <div class="step-item reveal delay-4" role="listitem">
+          <div class="step-number" aria-hidden="true">04</div>
+          <div class="step-icon" aria-hidden="true">🚀</div>
+          <div class="step-title">Deploy & Entrega</div>
+          <p class="step-desc">Publicamos na AWS com domínio configurado, SSL ativo e tudo funcionando. Suporte contínuo pós-lançamento.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       PORTFÓLIO
+  ================================================ -->
+  <section class="portfolio" id="portfolio" aria-labelledby="portfolio-title">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-tag">Projetos</div>
+        <h2 id="portfolio-title">Nosso <span>Portfólio</span></h2>
+        <p>Projetos reais em produção, desenvolvidos e hospedados na infraestrutura AWS.</p>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <!-- BRKids -->
+        <article class="portfolio-card reveal reveal-left">
+          <div class="portfolio-preview">
+            <iframe src="https://brkidscatalogo.com/"
+                    title="Preview do site BRKids Catálogo"
+                    loading="lazy"
+                    sandbox="allow-same-origin"
+                    tabindex="-1"
+                    aria-hidden="true">
+            </iframe>
+            <div class="portfolio-overlay">
+              <a href="https://brkidscatalogo.com/"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="btn btn-primary">
+                Ver Site
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">E-commerce</span>
+              <span class="portfolio-tag">Catálogo</span>
+              <span class="portfolio-tag">AWS S3</span>
+            </div>
+            <h3>BRKids Catálogo</h3>
+            <p>Catálogo digital de produtos infantis com visual moderno e hospedagem serverless. Otimizado para conversão e navegação mobile.</p>
+            <a href="https://brkidscatalogo.com/" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+              brkidscatalogo.com
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Laurha Marques -->
+        <article class="portfolio-card reveal reveal-right">
+          <div class="portfolio-preview">
+            <iframe src="https://laurhamarques.com/"
+                    title="Preview do site Laurha Marques Nail Studio"
+                    loading="lazy"
+                    sandbox="allow-same-origin"
+                    tabindex="-1"
+                    aria-hidden="true">
+            </iframe>
+            <div class="portfolio-overlay">
+              <a href="https://laurhamarques.com/"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="btn btn-primary">
+                Ver Site
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">Landing Page</span>
+              <span class="portfolio-tag">Beauty</span>
+              <span class="portfolio-tag">CloudFront</span>
+            </div>
+            <h3>Laurha Marques — Excellent Nails</h3>
+            <p>Landing page elegante para nail designer com catálogo de serviços, preços e chamada para ação. Deploy via CloudFront + S3.</p>
+            <a href="https://laurhamarques.com/" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+              laurhamarques.com
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CONTATO
+  ================================================ -->
+  <section class="contact" id="contato" aria-labelledby="contact-title">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-tag">Vamos conversar</div>
+        <h2 id="contact-title">Entre em <span>Contato</span></h2>
+        <p>Pronto para levar seu projeto para a nuvem? Fale com a gente agora mesmo.</p>
+      </div>
+
+      <div class="contact-wrapper">
+
+        <!-- Info esquerda -->
+        <div class="contact-info reveal reveal-left">
+          <h2>Vamos construir algo <span class="gradient-text">incrível</span> juntos?</h2>
+          <p>Nos conte sobre o seu projeto. Respondemos rapidamente e sem enrolação.</p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">📍</div>
+              <div class="contact-item-text">
+                <strong>Localização</strong>
+                <span>Goiânia, Goiás — Brasil</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">☁️</div>
+              <div class="contact-item-text">
+                <strong>Infraestrutura</strong>
+                <span>Amazon Web Services — us-east-1</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- WhatsApp destaque -->
+          <a href="https://wa.me/5562992099914?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Green%20Serverless."
+             class="whatsapp-cta"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Contato direto pelo WhatsApp">
+            <div class="whatsapp-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </div>
+            <div class="whatsapp-cta-text">
+              <strong>Resposta rápida pelo WhatsApp</strong>
+              <span>(62) 99209-9914 — Clique para conversar</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Formulário direita -->
+        <div class="contact-form reveal reveal-right" role="region" aria-label="Formulário de contato">
+          <form id="contact-form" novalidate aria-label="Formulário de orçamento">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nome">Nome *</label>
+                <input type="text"
+                       id="nome"
+                       name="nome"
+                       placeholder="Seu nome"
+                       required
+                       autocomplete="name"
+                       aria-required="true" />
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="seu@email.com"
+                       required
+                       autocomplete="email"
+                       aria-required="true" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="whatsapp">WhatsApp</label>
+              <input type="tel"
+                     id="whatsapp"
+                     name="whatsapp"
+                     placeholder="(00) 00000-0000"
+                     autocomplete="tel" />
+            </div>
+
+            <div class="form-group">
+              <label for="servico">Tipo de Projeto *</label>
+              <select id="servico" name="servico" required aria-required="true">
+                <option value="" disabled selected>Selecione o serviço</option>
+                <option value="landing-page">Landing Page</option>
+                <option value="site-institucional">Site Institucional</option>
+                <option value="ecommerce">E-commerce</option>
+                <option value="api-serverless">API Serverless</option>
+                <option value="catalogo">Catálogo Digital</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Mensagem *</label>
+              <textarea id="mensagem"
+                        name="mensagem"
+                        placeholder="Conte um pouco sobre o seu projeto..."
+                        required
+                        aria-required="true"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit" id="submit-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+              Enviar Mensagem
+            </button>
+
+            <div class="form-feedback" id="form-feedback" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       FOOTER
+  ================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <img src="logo.png" alt="Green Serverless" />
+          <p>Criamos sites e sistemas modernos na nuvem AWS. Serverless, escalável e sempre disponível.</p>
+          <div class="footer-social" aria-label="Redes sociais">
+            <a href="https://wa.me/5562992099914"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="social-btn"
+               title="WhatsApp"
+               aria-label="WhatsApp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Serviços -->
+        <div class="footer-col">
+          <h4>Serviços</h4>
+          <ul class="footer-links">
+            <li><a href="#servicos">Landing Page</a></li>
+            <li><a href="#servicos">Site Institucional</a></li>
+            <li><a href="#servicos">E-commerce</a></li>
+            <li><a href="#servicos">API Serverless</a></li>
+            <li><a href="#servicos">Catálogo Digital</a></li>
+          </ul>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#tecnologias">Tecnologias</a></li>
+            <li><a href="#como-funciona">Como Funciona</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2024 <span>Green Serverless</span>. Todos os direitos reservados.</p>
+        <div class="aws-powered">
+          Hospedado na
+          <span class="aws-powered-badge">AWS</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================================================
+       BOTÃO FLUTUANTE WHATSAPP
+  ================================================ -->
+  <a href="https://wa.me/5562992099914?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Green%20Serverless."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contato rápido pelo WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
